@@ -83,9 +83,41 @@ body {
   color: white;
 }
 
-.items {
+.main {
   display: flex;
   flex-basis: 70%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: first baseline;
+  align-items: center;
+}
+
+.search-area {
+  display: flex;
+  margin-top: 40px;
+  width: 70%;
+  justify-content: center;
+  
+}
+
+#search-text {
+  width: 70%;
+  margin-right: 10px;
+}
+
+#search-button {
+  width: 170px;
+  height: 35px;
+  margin: 0 auto;
+  border: 2px solid rgb(5, 52, 219);
+  background-color: rgb(5, 52, 219);
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.items {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 40px 0;
@@ -187,10 +219,14 @@ body {
   flex-direction: column;
 }
 
-.cart_item_price {
+.cart_item_price, .item__price {
   margin-top: 2px;
   color: darkcyan;
   font-weight: bold;
+}
+
+.item__price {
+  margin: 10px;
 }
 
 .total-price {
