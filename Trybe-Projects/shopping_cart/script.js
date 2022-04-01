@@ -3,8 +3,15 @@ const cart = document.querySelector('.cart__items');
 const cartTotal = document.querySelector('.total-price');
 const searchBtn = document.getElementById('search-button');
 const searchInput = document.getElementById('search-text');
+const cartIcon = document.querySelector('.material-icons');
+const titlecontainer = document.querySelector('.container-title');
+const cartTitleContainer = document.querySelector('.container-cartTitle');
+const cartDisplay = document.querySelector('.cart');
+const itemsInCartBadge = document.querySelector('.count');
+
 let cartItems;
 let itemsValues;
+let itemsInCart = 0;
 
 function createProductImageElement(imageSource) {
   const img = document.createElement('img');
@@ -50,6 +57,8 @@ function cartItemClickListener() {
   saveCartItems(cartItems);
   localStorage.setItem('itemsValues', JSON.stringify(itemsValues));
   this.remove();
+  itemsInCart -= 1;
+  itemsInCartBadge.innerText = itemsInCart;
 }
 
 function createCartItemElement({ sku, name, salePrice, image }) {
@@ -91,6 +100,8 @@ function addItemToCart() {
     saveCartItems(cartItems);
     localStorage.setItem('itemsValues', JSON.stringify(itemsValues));
   });
+  itemsInCart += 1;
+  itemsInCartBadge.innerText = itemsInCart;
 }
 
 function addSavedItemToCart(itemSku) {
@@ -104,6 +115,8 @@ function addSavedItemToCart(itemSku) {
     const item = createCartItemElement(obj);
     cart.appendChild(item);
   });
+  itemsInCart += 1;
+  itemsInCartBadge.innerText = itemsInCart;
 }
 
 function createProductItemElement({ sku, name, image, price }) {
@@ -182,10 +195,32 @@ function clearTheCart() {
   sumItems();
   saveCartItems(cartItems);
   localStorage.setItem('itemsValues', JSON.stringify(itemsValues));
+  itemsInCart = 0;
+  itemsInCartBadge.innerText = itemsInCart;
+}
+
+function toggleCart() {
+  cartStyle = window.getComputedStyle(cartTitleContainer);
+  display = cartStyle.getPropertyValue('display');
+  console.log(display);
+  if (display === 'flex'){
+    cartTitleContainer.style.display = 'none';
+    titlecontainer.style.width = '95%';
+    cartDisplay.style.display = 'none';
+  }
+  else {
+    cartTitleContainer.style.display = 'flex';
+    titlecontainer.style.width = '80%';
+    cartDisplay.style.display = 'flex';
+  }
 }
 
 window.onload = () => {
+  if (window.innerWidth < 700){
+    toggleCart();
+  }
   clearCart.addEventListener('click', clearTheCart);
+  cartIcon.addEventListener('click', toggleCart);
   searchBtn.addEventListener('click', loadProducts);
   searchInput.addEventListener('keydown', ({key}) => {
     if (key === 'Enter')

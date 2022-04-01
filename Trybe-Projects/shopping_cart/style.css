@@ -28,6 +28,22 @@ body {
   padding-left: 30px;
 }
 
+.icon {
+  position: relative;
+  border: 1px solid red;
+}
+
+.count {
+  position: absolute;
+  color: white;
+  font-weight: bolder;
+  background-color: darkcyan;
+  padding: 5px 10px;
+  border-radius: 50%;
+  right: -20px;
+  top: -5px;
+}
+
 .container-cartTitle {
   position: relative;
   display: flex;
