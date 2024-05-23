@@ -12,6 +12,7 @@ body {
 }
 
 #cabecalho {
+    border: 1px solid black;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,17 +24,20 @@ body {
 }
 
 #photo_section {
+    border: 1px solid black;
     margin-top: 100px;
     margin-bottom: 10px;
     text-align: center;
 }
 
 #minha_foto {
+    border: 1px solid black;
     height: 300px;
     border-radius: 100%;
 }
 
 .lado-direito, .lado-esquerdo {
+    border: 1px solid black;
     display: inline-block;
     padding: 5px;
     position: relative;
@@ -49,33 +53,39 @@ body {
 }
 
 .lado-esquerdo {
+    border: 1px solid black;
     width: 60%;
     top: 0px;
     left: 0px;
 }
 
 #licoes_aprendidas, #licoes_a_aprender {
+    border: 1px solid black;
     display: inline-block;
     width: 30%;
 }
 
 .licoes {
+    border: 1px solid black;
     margin-top: 5px;
     height: 220px;
     padding-bottom: 15px;
 }
 
 #licoes_aprendidas {
+    border: 1px solid black;
     position: absolute;
     left: 10%;
 }
 
 #licoes_a_aprender {
+    border: 1px solid black;
     position: absolute;
     right: 10%;
 }
 
 #tabela {
+    border: 1px solid black;
     border-collapse: collapse;
     margin-top: 5px;
     margin-left: 25%;
@@ -84,6 +94,7 @@ body {
 }
 
 .botao {
+    border: 1px solid black;
     height: 40px;
     margin-bottom: 5px;
     margin-top: 5px;
