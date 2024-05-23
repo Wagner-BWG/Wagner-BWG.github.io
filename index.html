@@ -1,22 +1,96 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Wagner Page</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <script>
-            let language = ["pt", "pt-BR", "pt-PT"]
-            if (language.includes(navigator.language)){
-                window.location.replace("index-ptBR.html");
-            }
-            else {
-                window.location.replace("index-en.html");
-            }
-        </script>
-    </body>
-</html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Um site biografico feio.</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header id="cabecalho">
+        <h1 id="titulo">Um site biografico feio.</h1>
+        <p>Por Wagner M. Barbosa Jr.</p>
+    </header>
+
+    <main>
+        <section id="photo_section">
+            <img id="minha_foto" src="wag_foto.jpg" alt="Wag foto">
+        </section>
+
+        <section id="mid_section">
+            <article class="lado-esquerdo">
+                <p>
+                    Texto auto biográfico cheio de encheção de linguíca que não significa nada e não leva a lugar nenhum.
+                     Um monte frases prolixas que quase não tem significado mas com vocabulário rebruscado fazdo paracer que Machado de
+                     Assis escreveu isso. Ou algum outro escritor bom, sei lá, não li os livros dele. <br>
+                    Incluindo, <span>uma quebra de linha para formatação!</span>
+                </p>
+            </article>
+
+            <aside class="lado-direito">
+                <p>
+                    Mais frases que não adicionam conteúdo nenhum.<br>
+                    Uma caixa de texto separada,<br>
+                    com intuido apenas de parecer mais bonito<br>
+                    na diagramação.
+                </p>
+            </aside>
+
+
+        </section>
+
+        <section class="licoes">
+            <ol id="licoes_aprendidas">
+                <li>Eins</li>
+                <li>Zwei</li>
+                <li>Drei</li>
+                <li>Vier</li>
+                <li>Fünf</li>
+                <li>Sechs</li>
+                <li>Sieben</li>
+                <li>Acht</li>
+                <li>Neun</li>
+                <li>Zehn</li>
+            </ol>
+
+            <ul id="licoes_a_aprender">
+                <li>Um ponto dessa lista</li>
+                <li>Outro ponto dessa lista</li>
+                <li>Mais um ponto dessa lista</li>
+                <li>Ainda mais um ponto dessa lista</li>
+                <li>E então um adicional ponto dessa lista</li>
+                <li>Penultimo ponto dessa lista</li>
+                <li>Ultimo ponto dessa lista</li>
+            </ul>
+        </section>
+
+        <section >
+            <table id="tabela">
+                <tr>
+                    <th colspan="3">Me encontre também em:</th>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/Wagner-BWG" target="_blank"><img class="botao" src="Octocat.jpg" alt="Logo do GitHub"></a></td>
+                    <td><a href="https://www.linkedin.com/in/wagnermbarbosa/" target="_blank"><img class="botao" src="LinkedIn_Logo.svg.png" alt="Logo do LinkedIn"></a></td>
+                    <td><a href="https://twitter.com/BadWolf_Wagner" target="_blank"><img class="botao" src="twitter.png" alt="Logo do Twitter"></a></td>
+                </tr>
+
+                <tr>
+                    <td>Repositórios de meus projetos aberto ao publico.</td>
+                    <td>Contato e informações profissionais.</td>
+                    <td>Hobbies e contatos informais.</td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+    <footer id="rodape">
+        <nav>
+            <p>Wagner Matos Barbosa Junior - 2022 - Todos os direitos reservados.
+                <br>Logos do GitHub, LinkedIn e Twitter usados de acordo com as <em>brand guidelines</em> de cada marca.
+            </p>
+        </nav>
+    </footer>
+</body>
