@@ -1,0 +1,70 @@
+img {
+    width: 200px;
+}
+
+main {
+    display: flex;
+    flex-flow: row;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    border: solid;
+}
+
+.div-botão {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card {
+    border: solid;
+    display: flex;
+    flex-direction: row;
+}
+
+.cadastro {
+    border: solid;
+    width: 20%;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    text-align: center;
+}
+
+.details {
+    width: 50%;;
+}
+
+.info {
+    border: solid;
+    width: 80%;
+}
+
+.subtable {
+    width: 100%;
+}
+
+@media screen and (max-width: 1150px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .cadastro {
+        width: 100%;
+    }
+    .info, .data {
+        width: 100%;
+    }
+}
+
